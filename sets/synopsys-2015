@@ -1,29 +1,24 @@
 #%Module 1.0 -*- tcl -*-
-#
-#  Module for use with 'environment-modules' package:
-#
+
 set name synopsys-2015
-set version 2015
 
 proc ModulesHelp { } {
-    global version
     global name
-    puts stderr "\tThis module loads $name version $version\n"
+    puts stderr "\tThis module loads $name\n"
 }
 
-module-whatis   "Add $name module"
+module-whatis "Add $name module"
 
-append-path  MODULEPATH                      /opt/share/modules/synopsys-2015/
+module use --append $env(KAUST_MODULES_ROOT)/$name
 
- if { [module-info mode load] } {
-   puts stderr "Loading module for $name"
-   puts stderr "Synopsys-2015 modules now loaded"
-   set-alias CDE {module load synopsys-2015 && module load customdesigner && cdesigner}
- }
+if { [module-info mode load] } {
+    puts stderr "Loading module for $name"
+    puts stderr "$name modules now loaded"
+    set-alias CDE {module load $name && module load customdesigner && cdesigner}
+}
 
-
- if { [module-info mode remove] } {
+if { [module-info mode remove] } {
     puts stderr "Unloading module for $name"
-    puts stderr "Synopsys-2015 modules now unloaded"
+    puts stderr "$name modules now unloaded"
     unset-alias CDE
- }
+}

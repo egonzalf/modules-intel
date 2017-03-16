@@ -15,6 +15,9 @@ if { [file isdirectory /scratch] } {
     setenv SCM_TMPDIR /scratch/$env(USER)
 } else {
     setenv SCM_TMPDIR /tmp
+    system mkdir $env(HOME)/.scm_gui
+    system cp -n $app_dir/common/*.tid $env(HOME)/.scm_gui
+    puts stderr "ADF queues for clusters are available."
 }
 
-prepend-path    PATH          $app_dir/bin
+prepend-path PATH $app_dir/bin

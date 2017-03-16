@@ -1,0 +1,11 @@
+#%Module 1.0 -*- tcl -*-
+
+source $env(KAUST_MODULES_ROOT)/common/setup.tcl
+
+GeneralAppSetup
+
+#### Should be reinstalled
+AddDeps "openmpi/1.10.2/intel-2015, boost/1.60.0/intel-2015"
+
+prepend-path PATH $app_dir/molprop_2012_1_Linux_x86_64_i8/bin
+prepend-path LIBRARY_PATH $app_dir/molprop_2012_1_Linux_x86_64_i8/lib
