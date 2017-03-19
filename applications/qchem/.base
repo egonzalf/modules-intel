@@ -5,8 +5,8 @@ GeneralAppSetup
 
 setenv QC $app_dir
 setenv QCPLATFORM LINUX_Ix86_64
-setenv QCSCRATCH /scratch/qchem
-setenv QCLOCALSCR /scratch/$::env(USER)
+setenv QCSCRATCH /tmp/qchem
+setenv QCLOCALSCR /tmp/$::env(USER)
 setenv QCAUX $app_dir/qcaux
 setenv QCMPI mpich
 setenv QCRSH /usr/bin/ssh
