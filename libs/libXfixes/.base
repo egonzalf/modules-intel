@@ -3,7 +3,6 @@
 source $env(KAUST_MODULES_ROOT)/common/setup.tcl
 GeneralAppSetup
 
-
 AddDeps "intel/2015"
 
 prepend-path PATH $app_dir/bin

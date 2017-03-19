@@ -3,7 +3,6 @@
 source $env(KAUST_MODULES_ROOT)/common/setup.tcl
 GeneralAppSetup
 
-
 AddDepsBasedOnCompiler
 AddDeps "netcdf"
-prepend-path    PATH    $app_dir/bin
+prepend-path PATH $app_dir/bin

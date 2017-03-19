@@ -6,5 +6,5 @@ GeneralAppSetup
 prepend-path PATH $app_dir/idl/bin
 prepend-path PATH $app_dir/envi/bin
 
-setenv 	IDL_DIR		$app_dir/idl
-setenv 	ENVI_DIR	$app_dir/envi
+setenv IDL_DIR $app_dir/idl
+setenv ENVI_DIR	$app_dir/envi

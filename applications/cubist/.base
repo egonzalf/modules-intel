@@ -3,5 +3,5 @@
 source $env(KAUST_MODULES_ROOT)/common/setup.tcl
 GeneralAppSetup
 
-setenv          CUBIST_ROOT     $app_dir
-prepend-path    PATH            $app_dir
+setenv CUBIST_ROOT $app_dir
+prepend-path PATH $app_dir

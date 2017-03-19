@@ -5,6 +5,6 @@ GeneralAppSetup
 
 AddDeps "gcc/5.2.0"
 
-prepend-path    PATH            $app_dir
-prepend-path    MANPATH         $app_dir/docs
-setenv          XCRYSDEN_TOPDIR $app_dir
+prepend-path PATH $app_dir
+prepend-path MANPATH $app_dir/docs
+setenv XCRYSDEN_TOPDIR $app_dir
